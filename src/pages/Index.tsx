@@ -114,15 +114,15 @@ const Index = () => {
           <div className="flex-1 flex flex-col md:flex-row gap-4 min-h-0">
 
             {/* Left (Image) */}
-            <div className="w-full md:w-1/2 h-[40%] md:h-full">
+            <div className="w-full md:w-3/5 h-[60%] md:h-full">
               <PokemonPreview pokemon={selectedPokemon} isLoading={isSearching} />
             </div>
 
             {/* Right Column */}
-            <div className="w-full md:w-1/2 h-[60%] md:h-full flex flex-col">
+            <div className="w-full md:w-2/5 h-[40%] md:h-full flex flex-col gap-2">
 
-              {/* Top (List) - fills height */}
-              <div className="h-[85%] flex-1 overflow-hidden bg-pokedex-screen-dark rounded-lg p-2">
+              {/* Top (List) */}
+              <div className="flex-1 overflow-hidden bg-pokedex-screen-dark rounded-lg p-2">
                 <PokemonList
                   pokemons={pokemons}
                   selectedId={selectedPokemon?.id || null}
@@ -135,7 +135,7 @@ const Index = () => {
               </div>
 
               {/* Bottom (Button) */}
-              <div className="h-[15%] mt-3 w-full flex justify-center">
+              <div className="w-full flex justify-center">
                 <button
                   onClick={handleChooseClick}
                   disabled={!selectedPokemon}
@@ -149,6 +149,7 @@ const Index = () => {
 
             </div>
           </div>
+
 
 
         </div>

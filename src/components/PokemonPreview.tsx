@@ -50,17 +50,16 @@ export function PokemonPreview({ pokemon, isLoading }: PokemonPreviewProps) {
   return (
     <div className="h-full flex flex-col">
       {/* Pokemon Image */}
-      <div className="h-[85%] flex-1 flex items-center justify-center bg-pokedex-lcd rounded-lg p-4 mb-3">
+      <div className="h-[60%] flex-1 flex items-center justify-center bg-pokedex-lcd rounded-lg p-4 mb-3">
         <img
           src={pokemon.sprite}
           alt={pokemon.name}
-          className="w-full max-w-[200px] h-auto object-contain animate-bounce-in drop-shadow-lg"
-          style={{ imageRendering: "auto" }}
+          className="max-w-[80px] sm:max-w-[100px] md:max-w-[200px] lg:max-w-[250px] w-full h-auto object-contain animate-bounce-in drop-shadow-lg"
         />
       </div>
 
       {/* Pokemon Info */}
-      <div className="h-[15%] bg-pokedex-lcd rounded-lg p-3 text-pokedex-lcd-text justify-evenly flex flex-col">
+      <div className="h-[40%] bg-pokedex-lcd rounded-lg p-3 text-pokedex-lcd-text justify-evenly flex flex-col">
         <div className="flex items-center justify-between mb-2">
           <span className="text-[10px] md:text-xs uppercase">{pokemon.name}</span>
           <span className="text-[10px] md:text-xs">#{pokemon.id.toString().padStart(3, "0")}</span>
